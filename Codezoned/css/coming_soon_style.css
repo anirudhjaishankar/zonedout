@@ -1,23 +1,24 @@
 @font-face {
 font-family: "pro-font";
-src: url("../css/fonts/ProFontWindows.ttf") format("truetype");
+src: url("fonts/ProFontWindows.ttf") format("truetype");
 
 }
 @font-face {
 font-family: "ocra";
-src: url("../css/fonts/OCRAEXT.TTF") format("truetype");
+src: url("fonts/OCRAEXT.TTF") format("truetype");
 
 }
 
 * {
     box-sizing: border-box;
 }
+
 html {
-    height: 100%;
+	height: 100%;
 }
 body{
 	
-	height: 100%;
+	height: 100vh;
 	width: 100%;
 	position: absolute;
     top:0;
@@ -52,13 +53,32 @@ img{
 	max-width: 100%;
 }
 
+#gridContainer { padding: 20px; }
+	.grid-row > div { 
+		
+		padding: 10px;
+		
+		margin: 5px 0; 
+	}
 
 .icons{
-	font-size:1.7em;
-	color:floralwhite;
+	position: absolute;
+	font-size:1.5em;
+	bottom: 5%;
+	right: 45%;
+	text-align: center;
+	background-color: transparent;
+
 }
 
-@media(min-width: 800px){
+.icons i{
+	margin: 0 15px;
+	color: white;
+}
+
+
+
+@media(min-width: 768px){
 	backquote{
 		margin-left:25%;
 	}
@@ -73,16 +93,14 @@ img{
 
 	.spread-body{
 		background-repeat: no-repeat;
-		/*background: linear-gradient(#2C3E50,#904e95);*/
 		background-image: url(../images/astronomy.jpg);
 		background-size: auto;
 		height: 100%;
 		width: 100%;
 		margin: auto;
-		overflow: scroll;
+		overflow: hidden;
 		-webkit-overflow-scrolling: touch;
 		background-position: center;
-   		background-repeat: no-repeat;
     	background-size: cover;
 	}
 
@@ -91,9 +109,8 @@ img{
 		 top: 0; 
 		 right: 4%;
 		 padding:0;
-		 /*margin: 5%;*/
-		 max-height: 170px;
-		 max-width: 200px;
+		 max-height: 190px;
+		 max-width: 220px;
 		}
 	.logo-class{
 		background-color: black;
@@ -112,16 +129,15 @@ img{
 		margin: 5%;
 		padding: 0;
 		color: white;
-		opacity: 0.75;
 		text-align: left;
 		position: relative;
-		top: 18vw;
+		top: 20vw;
 		transform: translateY(-50%);
 		text-align: justify;
 	}
 
 	.quotation{
-		font-size: 1.5vw;
+		font-size: 1.4vw;
 		font-family: "pro-font";
 	}
 
@@ -129,7 +145,7 @@ img{
 		width: 400px;
 		background-color: transparent;
 		height: 50px;
-		text-align: center;
+		text-align: left;
 		top: 20vw;
 		left: 0;
 
@@ -143,7 +159,6 @@ img{
 		line-height: 18px;
 		color:white;
 		border: solid white 0.8px;
-		/*border-radius: 12px;*/
 		-webkit-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
 		display: inline-block;
@@ -154,9 +169,8 @@ img{
 		-ms-touch-action: manipulation;
 		touch-action: manipulation;
 		background-image: none;
-		text-align: center;
+		text-align: left;
 		line-height: 36px;
-		vertical-align: middle;
 		white-space: nowrap;
 		-webkit-user-select: none;
 		-moz-user-select: none;
@@ -183,14 +197,15 @@ img{
 	.coming-soon-text{
 		position: absolute; 
 		width: 30vw;
-		bottom: 0; 
-		right: 5%;
+		bottom: 10px; 
+		right: 2%;
 		padding: 20px 20px;
 		font-size: 1em;
 		font-family: 'ocra';
 		text-align: justify-all;
 		background-color: transparent;
 		color: white;
+		opacity: 0.75;
 
 
 	}
@@ -199,67 +214,52 @@ img{
 	}
 }
 
-@media(max-width: 800px){
-	backquote{
+@media(max-width: 768px){
+	/*backquote{
 		margin-left:15%;
-	}
-	.code{
-		margin-left: 10%;
-	}
+	}*/
 	.spread-body{
 
 
 		background-repeat: no-repeat;
-		/*background: linear-gradient(#2C3E50,#904e95);*/
 		background-image: url(../images/astronomy.jpg);
 		background-size: auto;
 		height: 100%;
 		width: 100%;
 		margin: auto auto;
-		overflow: scroll;
+		overflow: hidden;
 		-webkit-overflow-scrolling: touch;
 		background-position: center;
    		background-repeat: no-repeat;
     	background-size: cover;
     }
+
+    .logo-class{
+    	text-align: center;
+    }
+
+
 	.logo{
-		 position: static; 
-		 top: 0; 
-		 margin-left: 65%;
-		 max-height: 100px;
-		 max-width: 130px;
-		 margin-bottom: 20px;
+		 position: relative; 
+		 margin: 0 auto;
+		 max-height: 127.5px;
+		 max-width: 157.5px;
+		 margin-bottom: 15%;
+		 
 		}
 
-	.tagline{
-		 position: static; 
-		 top: 0; 
-		 right: 0;
-		 size: 12px;
-		 color: white;
-	}
 
 	.quote{
 		margin: 5%;
-		margin-top:10%;
 		padding: 0;
 		color: white;
-		opacity: 0.75;
-		text-align: left;
+		text-align: center;
 		position: relative;
-		top: 15%;
+		top: 20%;
 		transform: translateY(-50%);
 		z-index: 100;
 		text-align: justify;
-		
-		/*padding: 0;
-		color: white;
-		opacity: 0.75;
-		text-align: left;
-		position: relative;
-		top: 18vw;
-		transform: translateY(-50%);*/
-		
+		word-spacing: 4px;
 		
 	}
 
@@ -270,33 +270,31 @@ img{
 
 	.email-class{
 		max-width: 500px;
-		min-width: 200px;
+		min-width: 150px;
 	    padding: 4.8px;
 	    color: white;
 	    resize: horizontal;
 	    margin: auto auto;
 	    background-color: transparent;
 	    border: solid white 0.8px;
-		/*border-radius: 12px;*/
 	}
 
 
 	.link{
+
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 18px;
-		/*text-transform: uppercase;*/
+		font-size: 12px;
+		line-height: 16px;
 		color:white;
 		background-color: transparent;
 		border: solid white 0.8px;
-		/*border-radius: 12px;*/
 		-webkit-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
 		display: inline-block;
 		height: 36px;
 		padding: 0 26px;
-		margin: 6px 0;
-		margin-left: 25%;
+		left: 8%;
+		text-align: center;
 		cursor: pointer;
 		-ms-touch-action: manipulation;
 		touch-action: manipulation;
@@ -325,22 +323,25 @@ img{
 
 	.coming-soon-text{ 
 		position: absolute;
-		bottom: 0; 
+		bottom: 1.85em; 
 		right: 0; 
 		padding: 20px 20px;
 		font-size: .9em;
 		font-family: "ocra";
 		background-color: transparent;
 		color: white;
-		/*float: bottom;*/
+		opacity: 0.75;
 	}
 
 	.coming-soon{
 		float: bottom;
 	}
 	.icons{
-		margin-left:25%;
-		margin-top:5%;
+		padding: 0 0.3vw;
+		margin-top:8%;
+		background-color: transparent;
+		right: 30%;
+		
 	}
 	.fa{
 		margin-left:10%;
